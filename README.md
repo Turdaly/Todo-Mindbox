@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Todo App - Mindbox Frontend Стажировка
 
-## Getting Started
+Современное Todo приложение, разработанное с использованием TypeScript и React для стажировки в Mindbox.
 
-First, run the development server:
+## Описание проекта
+
+Это полнофункциональное приложение для управления задачами с следующими возможностями:
+
+- ✅ Добавление новых задач
+- ✅ Отметка задач как выполненных/невыполненных
+- ✅ Удаление отдельных задач
+- ✅ Фильтрация задач (все/активные/выполненные)
+- ✅ Счетчик оставшихся активных задач
+- ✅ Очистка всех выполненных задач
+- ✅ Адаптивный дизайн
+- ✅ Полное покрытие тестами
+
+## Технологии
+
+- **React 18** с TypeScript
+- **Next.js 15** - для серверного рендеринга и оптимизации
+- **Tailwind CSS** - для стилизации
+- **Radix UI** - доступные компоненты интерфейса
+- **Jest & React Testing Library** - для тестирования
+- **Lucide React** - иконки
+
+## Установка и запуск
 
 ```bash
+# Установка зависимостей
+npm install
+
+# Запуск в режиме разработки
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Запуск тестов
+npm test
+
+# Сборка для продакшена
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Приложение будет доступно по адресу [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Структура проекта
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── components/          # React компоненты
+│   ├── ui/             # Базовые UI компоненты
+│   ├── TodoApp.tsx     # Главный компонент приложения
+│   ├── TodoInput.tsx   # Компонент для ввода новых задач
+│   ├── TodoList.tsx    # Список задач
+│   ├── TodoItem.tsx    # Отдельная задача
+│   ├── TodoFilters.tsx # Фильтры задач
+│   └── TodoStats.tsx   # Статистика задач
+├── hooks/              # Пользовательские хуки
+│   └── useTodos.ts     # Логика управления задачами
+├── types/              # TypeScript типы
+└── __tests__/          # Тесты
+```
 
-## Learn More
+## Особенности реализации
 
-To learn more about Next.js, take a look at the following resources:
+- **TypeScript** - строгая типизация для предотвращения ошибок
+- **Компонентная архитектура** - модульная и переиспользуемая структура
+- **Custom Hooks** - вынесение логики в отдельные хуки
+- **Accessibility** - поддержка screen readers и навигации с клавиатуры
+- **Responsive Design** - адаптация под разные размеры экранов
+- **Comprehensive Testing** - покрытие всех основных функций тестами
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Требования к проекту
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Проект полностью соответствует требованиям стажировки Mindbox:
 
-## Deploy on Vercel
+- [x] Поле для ввода новой задачи
+- [x] Список задач с тремя вариантами отображения
+- [x] Счетчик количества невыполненных задач
+- [x] Кнопка "Очистить выполненные"
+- [x] Использование TypeScript и React Hooks
+- [x] Возможность запуска через npm команды
+- [x] Покрытие ключевого функционала тестами
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Тестирование
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Проект включает полное покрытие тестами:
+
+```bash
+# Запуск всех тестов
+npm test
+
+# Запуск тестов в watch режиме
+npm run test:watch
+
+# Генерация отчета о покрытии
+npm run test:coverage
+```
+
+## Автор
+
+Создано для стажировки в Mindbox Frontend.
